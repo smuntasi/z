@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Zarina </title>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
   <style>
     *,
     *::after,
@@ -19,26 +19,58 @@
       align-items: flex-end;
       justify-content: center;
       min-height: 100vh;
-      background: linear-gradient(135deg, #ffe5e5 0%, #fff0f0 50%, #ffe5e5 100%);
+      background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%);
       overflow: hidden;
       perspective: 1000px;
-      font-family: 'Caveat', cursive;
+      font-family: 'Nothing You Could Do', cursive;
     }
 
     .message {
       position: absolute;
-      top: 15%;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 8vmin;
-      color: #ffffff;
-      text-shadow: 
-        3px 3px 0 #ff6b6b,
-        6px 6px 0 #dc143c,
-        2px 2px 20px rgba(220, 20, 60, 0.4);
-      animation: float 3s ease-in-out infinite, fadeIn 1s 4s backwards;
+      top: 5%;
+      right: 5%;
       z-index: 1000;
-      text-align: center;
+      text-align: right;
+      font-size: 6vmin;
+      background: linear-gradient(45deg, #ff69b4, #ff1493, #9d4edd, #c77dff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -webkit-text-stroke: 2px white;
+      text-stroke: 2px white;
+      paint-order: stroke fill;
+      animation: fadeIn 1s 4s backwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideRotate {
+      0% {
+        opacity: 0;
+        transform: translateX(-150%) rotate(-15deg);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(-50%) rotate(0deg);
+      }
+    }
+
+    @keyframes gentle-sway {
+      0%, 100% {
+        transform: translateX(-50%) rotate(-2deg);
+      }
+      50% {
+        transform: translateX(-50%) rotate(2deg);
+      }
     }
 
     @keyframes fadeIn {
@@ -917,6 +949,14 @@
       animation: moving-grass--2 1.5s linear infinite;
     }
 
+    .flower__grass--3 {
+      left: auto;
+      right: -7vmin;
+      bottom: 12vmin;
+      transform: rotate(48deg) rotateY(-40deg);
+      animation: moving-grass--3 2s linear infinite;
+    }
+
     .flower__grass--top {
       width: 7vmin;
       height: 10vmin;
@@ -1193,6 +1233,13 @@
       animation: flower__g-front-ans 2s linear infinite;
     }
 
+    .flower__g-front--right {
+      left: auto;
+      right: 2.5vmin;
+      transform: rotate(28deg) rotateY(-30deg) scale(1.04);
+      animation: flower__g-front-ans-right 2s linear infinite;
+    }
+
     @keyframes flower__g-front-ans {
       0%,
       100% {
@@ -1200,6 +1247,16 @@
       }
       50% {
         transform: rotate(-35deg) rotateY(40deg) scale(1.04);
+      }
+    }
+
+    @keyframes flower__g-front-ans-right {
+      0%,
+      100% {
+        transform: rotate(28deg) rotateY(-30deg) scale(1.04);
+      }
+      50% {
+        transform: rotate(35deg) rotateY(-40deg) scale(1.04);
       }
     }
 
@@ -1713,6 +1770,17 @@
         transform: scale(0.5) rotate(79deg) rotateX(10deg) rotateY(-200deg);
       }
     }
+
+    @keyframes moving-grass--3 {
+      0%,
+      100% {
+        transform: rotate(48deg) rotateY(-40deg);
+      }
+
+      50% {
+        transform: rotate(50deg) rotateY(-40deg);
+      }
+    }
   </style>
 </head>
 <body class="not-loaded">
@@ -2093,6 +2161,52 @@
           <div class="flower__g-front__leaf"></div>
         </div>
         <div class="flower__g-front__line"></div>
+      </div>
+    </div>
+
+    <div class="grow-ans" style="--d:3s">
+      <div class="flower__g-front flower__g-front--right">
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--1">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--2">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--3">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--4">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--5">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--6">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--7">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--8">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__line"></div>
+      </div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--3">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+        <div class="flower__grass__overlay"></div>
       </div>
     </div>
 
